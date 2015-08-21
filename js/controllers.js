@@ -1,17 +1,1 @@
-app.controller('MovieController', function ($scope, $http, $routeParams) {
-  $scope.searchApi = function () {
-    $http.get('http://www.omdbapi.com/?s= '+$scope.query+'')
-      .then(function(data) {
-        $scope.results = data.data.Search;
-        console.log($scope.results);
-      });
-  };
-});
-app.controller('ShowController', function ($scope, $http, $routeParams) {
-  $scope.thisMovie = {};
-    $http.get('http://www.omdbapi.com/?i=' + $routeParams.id)
-      .then(function(data) {
-        $scope.thisMovie = data.data;
-        console.log($scope.thisMovie);
-      });
-});
+app.controller("MovieController",["$scope","$http",function(o,t){o.searchApi=function(){t.get("http://www.omdbapi.com/?s= "+o.query).then(function(t){o.results=t.data.Search,console.log(o.results)})}}]),app.controller("ShowController",["$scope","$http","$routeParams",function(o,t,e){o.thisMovie={},t.get("http://www.omdbapi.com/?i="+e.id).then(function(t){o.thisMovie=t.data,console.log(o.thisMovie)})}]);
