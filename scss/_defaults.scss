@@ -1,0 +1,21 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}

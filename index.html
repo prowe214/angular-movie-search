@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="movies">
+  <head>
+    <meta charset="utf-8">
+    <title>Movie Search with Angular</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.4.4/angular-route.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+    <link rel="stylesheet" href="/css/style.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body ng-controller="MovieController">
+    <header>
+      <h1>Search Movies in Angular!</h1>
+      <h2>Utilizing the OMDb API</h2>
+      <div class="formrow">
+        <input type="text" name="search" ng-model="query" placeholder="Enter a movie by title...">
+      </div>
+      <div class="formrow">
+        <a ng-click="searchApi()" ng-href="/#/?{{query}}" >Search</a>
+      </div>
+      <hr>
+    </header>
+    <main>
+      <div ng-view></div>
+    </main>
+  </body>
+</html>

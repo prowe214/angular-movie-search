@@ -1,0 +1,26 @@
+<div class='show'>
+  <div class="poster clearfix">
+    <img ng-src="{{thisMovie.Poster}}" alt="poster" />
+  </div>
+  <div class="info">
+    <h3>{{thisMovie.Title}}</h3>
+    <p>
+      <strong>Starring:</strong><br>
+      {{thisMovie.Actors}}
+    </p>
+    <p>
+      <strong>Description:</strong><br>
+      {{thisMovie.Plot}}
+    </p>
+    <hr>
+    <h4>Additional Information</h4>
+    <p><strong>Released:</strong> {{thisMovie.Released}}</p>
+    <p><strong>Runtime:</strong> {{thisMovie.Runtime}}</p>
+    <p><strong>Rated:</strong> {{thisMovie.Rated}}</p>
+    <p><strong>Genre:</strong> {{thisMovie.Genre}}</p>
+    <p><strong>Director:</strong> {{thisMovie.Director}}</p>
+    <p><strong>Writers:</strong> {{thisMovie.Writer}}</p>
+    <p><strong>Language:</strong> {{thisMovie.Language}}</p>
+    <p><strong>Awards:</strong> {{thisMovie.Awards}}</p>
+  </div>
+</div>
